@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated using SpeedTree tools -->
+<Materials Count="11" Mesh="Pine EasternWhite Sapling- 10.fbx" FlipOpacity="0">
+	<Material ID="1" Name="Bark_Mat" TwoSided="0" UserData="" VertexOpacity="1" FlipNormalsOnBackside="1">
+		<Map Name="Color" File="Bark.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Bark/Pine_bark_4.png" />
+		<Map Name="Normal" File="Bark_Normal.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Bark/Pine_bark_4_NRM.png" />
+		<Map Name="Gloss" File="Bark_Gloss.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Bark/Pine_bark_4_Gloss.png" />
+		<Map Name="Specular" ColorR="0.75" ColorG="0.75" ColorB="0.75" />
+		<Map Name="AO" File="Bark_AO.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Bark/Pine_bark_4_AO.png" />
+		<Map Name="Height" Value="0.5" />
+		<Map Name="Custom" ColorR="0" ColorG="0" ColorB="0" />
+		<Map Name="Custom2" Value="0" />
+	</Material>
+	<Material ID="9" Name="Cone_Mat" TwoSided="1" UserData="" VertexOpacity="1" FlipNormalsOnBackside="1">
+		<Map Name="Color" File="Cone.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Cone/PineCone.png" />
+		<Map Name="Opacity" File="Cone_Opacity.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Cone/PineCone_Opacity.png" />
+		<Map Name="Normal" File="Cone_Normal.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Cone/PineCone_Normal.png" />
+		<Map Name="Gloss" File="Cone_Gloss.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Cone/PineCone_Gloss.png" />
+		<Map Name="Specular" ColorR="0.75" ColorG="0.75" ColorB="0.75" />
+		<Map Name="SubsurfaceColor" File="Cone_SubsurfaceColor.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Cone/PineCone_SubsurfaceColor.png" />
+		<Map Name="SubsurfaceAmount" File="Cone_SubsurfaceAmount.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Cone/PineCone_SubsurfaceAmount.png" />
+		<Map Name="AO" File="Cone_AO.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Cone/PineCone_AO.png" />
+		<Map Name="Height" Value="0.5" />
+		<Map Name="Custom" ColorR="0" ColorG="0" ColorB="0" />
+		<Map Name="Custom2" Value="0" />
+	</Material>
+	<Material ID="4" Name="Leaf_1_Mat" TwoSided="1" UserData="" VertexOpacity="1" FlipNormalsOnBackside="1">
+		<Map Name="Color" File="Leaf_1.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3.png" />
+		<Map Name="Opacity" File="Leaf_1_Opacity.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_Opacity.png" />
+		<Map Name="Normal" File="Leaf_1_Normal.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_Normal.png" />
+		<Map Name="Gloss" File="Leaf_1_Gloss.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_Gloss.png" />
+		<Map Name="Specular" ColorR="0.75" ColorG="0.75" ColorB="0.75" />
+		<Map Name="SubsurfaceColor" File="Leaf_1_SubsurfaceColor.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_Subsurface.png" />
+		<Map Name="SubsurfaceAmount" File="Leaf_1_SubsurfaceAmount.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_SubsurfaceAmount.png" />
+		<Map Name="AO" File="Leaf_1_AO.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_AO.png" />
+		<Map Name="Height" Value="0.5" />
+		<Map Name="Custom" ColorR="0" ColorG="0" ColorB="0" />
+		<Map Name="Custom2" Value="0" />
+	</Material>
+	<Material ID="1004" Name="Leaf_1_v2_Mat" TwoSided="1" UserData="" VertexOpacity="1" FlipNormalsOnBackside="1">
+		<Map Name="Color" File="Leaf_1_v2.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3.png" />
+		<Map Name="Opacity" File="Leaf_1_Opacity.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_Opacity.png" />
+		<Map Name="Normal" File="Leaf_1_Normal.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_Normal.png" />
+		<Map Name="Gloss" File="Leaf_1_Gloss.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_Gloss.png" />
+		<Map Name="Specular" ColorR="0.75" ColorG="0.75" ColorB="0.75" />
+		<Map Name="SubsurfaceColor" File="Leaf_1_v2_SubsurfaceColor.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_Subsurface.png" />
+		<Map Name="SubsurfaceAmount" File="Leaf_1_SubsurfaceAmount.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_SubsurfaceAmount.png" />
+		<Map Name="AO" File="Leaf_1_AO.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_AO.png" />
+		<Map Name="Height" Value="0.5" />
+		<Map Name="Custom" ColorR="0" ColorG="0" ColorB="0" />
+		<Map Name="Custom2" Value="0" />
+	</Material>
+	<Material ID="2004" Name="Leaf_1_v3_Mat" TwoSided="1" UserData="" VertexOpacity="1" FlipNormalsOnBackside="1">
+		<Map Name="Color" File="Leaf_1_v3.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3.png" />
+		<Map Name="Opacity" File="Leaf_1_Opacity.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_Opacity.png" />
+		<Map Name="Normal" File="Leaf_1_Normal.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_Normal.png" />
+		<Map Name="Gloss" File="Leaf_1_Gloss.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_Gloss.png" />
+		<Map Name="Specular" ColorR="0.75" ColorG="0.75" ColorB="0.75" />
+		<Map Name="SubsurfaceColor" File="Leaf_1_v3_SubsurfaceColor.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_Subsurface.png" />
+		<Map Name="SubsurfaceAmount" File="Leaf_1_SubsurfaceAmount.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_SubsurfaceAmount.png" />
+		<Map Name="AO" File="Leaf_1_AO.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_AO.png" />
+		<Map Name="Height" Value="0.5" />
+		<Map Name="Custom" ColorR="0" ColorG="0" ColorB="0" />
+		<Map Name="Custom2" Value="0" />
+	</Material>
+	<Material ID="3004" Name="Leaf_1_v4_Mat" TwoSided="1" UserData="" VertexOpacity="1" FlipNormalsOnBackside="1">
+		<Map Name="Color" File="Leaf_1_v4.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3.png" />
+		<Map Name="Opacity" File="Leaf_1_Opacity.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_Opacity.png" />
+		<Map Name="Normal" File="Leaf_1_Normal.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_Normal.png" />
+		<Map Name="Gloss" File="Leaf_1_Gloss.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_Gloss.png" />
+		<Map Name="Specular" ColorR="0.75" ColorG="0.75" ColorB="0.75" />
+		<Map Name="SubsurfaceColor" File="Leaf_1_v4_SubsurfaceColor.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_Subsurface.png" />
+		<Map Name="SubsurfaceAmount" File="Leaf_1_SubsurfaceAmount.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_SubsurfaceAmount.png" />
+		<Map Name="AO" File="Leaf_1_AO.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Needle_3_AO.png" />
+		<Map Name="Height" Value="0.5" />
+		<Map Name="Custom" ColorR="0" ColorG="0" ColorB="0" />
+		<Map Name="Custom2" Value="0" />
+	</Material>
+	<Material ID="5" Name="Leaf_2_Mat" TwoSided="1" UserData="" VertexOpacity="1" FlipNormalsOnBackside="1">
+		<Map Name="Color" File="Leaf_2.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2.png" />
+		<Map Name="Opacity" File="Leaf_2_Opacity.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_Opacity.png" />
+		<Map Name="Normal" File="Leaf_2_Normal.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_Normal.png" />
+		<Map Name="Gloss" File="Leaf_2_Gloss.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_Gloss.png" />
+		<Map Name="Specular" ColorR="0.75" ColorG="0.75" ColorB="0.75" />
+		<Map Name="SubsurfaceColor" File="Leaf_2_SubsurfaceColor.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_Subsurface.png" />
+		<Map Name="SubsurfaceAmount" File="Leaf_2_SubsurfaceAmount.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_SubsurfaceAmount.png" />
+		<Map Name="AO" File="Leaf_2_AO.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_AO.png" />
+		<Map Name="Height" Value="0.5" />
+		<Map Name="Custom" ColorR="0" ColorG="0" ColorB="0" />
+		<Map Name="Custom2" Value="0" />
+	</Material>
+	<Material ID="1005" Name="Leaf_2_v2_Mat" TwoSided="1" UserData="" VertexOpacity="1" FlipNormalsOnBackside="1">
+		<Map Name="Color" File="Leaf_2_v2.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2.png" />
+		<Map Name="Opacity" File="Leaf_2_Opacity.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_Opacity.png" />
+		<Map Name="Normal" File="Leaf_2_Normal.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_Normal.png" />
+		<Map Name="Gloss" File="Leaf_2_Gloss.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_Gloss.png" />
+		<Map Name="Specular" ColorR="0.75" ColorG="0.75" ColorB="0.75" />
+		<Map Name="SubsurfaceColor" File="Leaf_2_v2_SubsurfaceColor.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_Subsurface.png" />
+		<Map Name="SubsurfaceAmount" File="Leaf_2_SubsurfaceAmount.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_SubsurfaceAmount.png" />
+		<Map Name="AO" File="Leaf_2_AO.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_AO.png" />
+		<Map Name="Height" Value="0.5" />
+		<Map Name="Custom" ColorR="0" ColorG="0" ColorB="0" />
+		<Map Name="Custom2" Value="0" />
+	</Material>
+	<Material ID="2005" Name="Leaf_2_v3_Mat" TwoSided="1" UserData="" VertexOpacity="1" FlipNormalsOnBackside="1">
+		<Map Name="Color" File="Leaf_2_v3.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2.png" />
+		<Map Name="Opacity" File="Leaf_2_Opacity.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_Opacity.png" />
+		<Map Name="Normal" File="Leaf_2_Normal.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_Normal.png" />
+		<Map Name="Gloss" File="Leaf_2_Gloss.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_Gloss.png" />
+		<Map Name="Specular" ColorR="0.75" ColorG="0.75" ColorB="0.75" />
+		<Map Name="SubsurfaceColor" File="Leaf_2_v3_SubsurfaceColor.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_Subsurface.png" />
+		<Map Name="SubsurfaceAmount" File="Leaf_2_SubsurfaceAmount.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_SubsurfaceAmount.png" />
+		<Map Name="AO" File="Leaf_2_AO.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_AO.png" />
+		<Map Name="Height" Value="0.5" />
+		<Map Name="Custom" ColorR="0" ColorG="0" ColorB="0" />
+		<Map Name="Custom2" Value="0" />
+	</Material>
+	<Material ID="3005" Name="Leaf_2_v4_Mat" TwoSided="1" UserData="" VertexOpacity="1" FlipNormalsOnBackside="1">
+		<Map Name="Color" File="Leaf_2_v4.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2.png" />
+		<Map Name="Opacity" File="Leaf_2_Opacity.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_Opacity.png" />
+		<Map Name="Normal" File="Leaf_2_Normal.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_Normal.png" />
+		<Map Name="Gloss" File="Leaf_2_Gloss.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_Gloss.png" />
+		<Map Name="Specular" ColorR="0.75" ColorG="0.75" ColorB="0.75" />
+		<Map Name="SubsurfaceColor" File="Leaf_2_v4_SubsurfaceColor.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_Subsurface.png" />
+		<Map Name="SubsurfaceAmount" File="Leaf_2_SubsurfaceAmount.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_SubsurfaceAmount.png" />
+		<Map Name="AO" File="Leaf_2_AO.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Leaves/Pine_2_AO.png" />
+		<Map Name="Height" Value="0.5" />
+		<Map Name="Custom" ColorR="0" ColorG="0" ColorB="0" />
+		<Map Name="Custom2" Value="0" />
+	</Material>
+	<Material ID="2" Name="Twig_Mat" TwoSided="0" UserData="" VertexOpacity="1" FlipNormalsOnBackside="1">
+		<Map Name="Color" File="Twig.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Bark/Bark_1.png" />
+		<Map Name="Normal" File="Twig_Normal.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Bark/Bark_1_Normal.png" />
+		<Map Name="Gloss" File="Twig_Gloss.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Bark/Bark_1_Gloss.png" />
+		<Map Name="Specular" ColorR="0.75" ColorG="0.75" ColorB="0.75" />
+		<Map Name="AO" File="Twig_AO.jpeg" Source="D:/Skechfab Store-tree/Pine Eastern White Sapling/Speedtree file/Pine_EasternWhite_Sapling/Pine_EasternWhite_Sapling/Bark/Bark_1_AO.png" />
+		<Map Name="Height" Value="0.5" />
+		<Map Name="Custom" ColorR="0" ColorG="0" ColorB="0" />
+		<Map Name="Custom2" Value="0" />
+	</Material>
+</Materials>

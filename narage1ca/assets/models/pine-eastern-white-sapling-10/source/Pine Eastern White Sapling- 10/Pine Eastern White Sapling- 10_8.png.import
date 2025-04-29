@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://lfiwru4tpg8k"
+path.s3tc="res://.godot/imported/Pine Eastern White Sapling- 10_8.png-37608908f56057fb993e91f4276d34b2.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "4522c88e729284bd9d8f170909973e7b"
+}
+
+[deps]
+
+source_file="res://assets/models/pine-eastern-white-sapling-10/source/Pine Eastern White Sapling- 10/Pine Eastern White Sapling- 10_8.png"
+dest_files=["res://.godot/imported/Pine Eastern White Sapling- 10_8.png-37608908f56057fb993e91f4276d34b2.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://assets/models/pine-eastern-white-sapling-10/source/Pine Eastern White Sapling- 10/Pine Eastern White Sapling- 10_8.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
