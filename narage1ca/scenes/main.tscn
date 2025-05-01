@@ -1954,5 +1954,7 @@ shape = SubResource("ConvexPolygonShape3D_mlv25")
 
 [node name="DeerContainer" type="Node3D" parent="."]
 
+[node name="MC" type="CharacterBody3D" parent="."]
+
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.0332293, 0.741121, -0.670549, -0.0366816, 0.671371, 0.740213, 0.998774, 3.63767e-09, 0.0494947, -24.9562, 18.5188, 1.1254)
