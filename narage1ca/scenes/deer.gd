@@ -1,48 +1,49 @@
 extends CharacterBody3D
 
-@export var speed := randf_range(1.0, 2.5)
-@export var gravity := 9.8
+@export var min_speed: float = 1.0
+@export var max_speed: float = 2.5
 
-var move_direction: Vector3 = Vector3.ZERO
-var change_timer := 0.0
-var target_direction: Vector3 = Vector3.ZERO
+var gravity := 9.8
 
-func _ready():
-	$AnimationPlayer.play("walk")
-	choose_new_direction()
+@onready var anim_player: AnimationPlayer = $AnimationPlayer
+@onready var dir_timer: Timer = $DirectionTimer
 
-func _physics_process(delta):
-	change_timer -= delta
-	if change_timer <= 0:
-		choose_new_direction()
-	
-	# Smooth interpolation toward the target direction
-	move_direction = move_direction.lerp(target_direction, 0.05)
-	
-	velocity.x = move_direction.x * speed
-	velocity.z = move_direction.z * speed
-	velocity.y -= gravity * delta
+var speed: float
+var move_dir: Vector3 = Vector3.ZERO
 
+func _ready() -> void:
+	randomize()
+	speed = randf_range(min_speed, max_speed)
+	anim_player.play("walk")
+
+	# Configure and start our direction‐change timer
+	dir_timer.one_shot = false
+	dir_timer.wait_time = randf_range(2.0, 5.0)
+	dir_timer.start()
+	dir_timer.timeout.connect(_on_dir_timer_timeout)
+
+	_on_dir_timer_timeout()
+
+func _physics_process(delta: float) -> void:
+	# gravity
+	if not is_on_floor():
+		velocity.y -= gravity * delta
+	else:
+		velocity.y = 0.0
+
+	# move
+	velocity.x = move_dir.x * speed
+	velocity.z = move_dir.z * speed
 	move_and_slide()
-	
-	# Check for collisions and turn around if hit something
-	for i in get_slide_collision_count():
-		var collision = get_slide_collision(i)
-		if collision:
-			# Reverse direction if hit
-			target_direction = -move_direction.normalized()
-			move_direction = target_direction
-			change_timer = randf_range(1.0, 3.0)  # Pick a new direction soon
-			break  # Only react to the first collision
-		
-	var horizontal_velocity = Vector3(velocity.x, 0, velocity.z)
-	if horizontal_velocity.length() > 0.1:
-		var facing = global_position + horizontal_velocity.normalized()
-		look_at(Vector3(facing.x, global_position.y, facing.z), Vector3.UP)
-		rotate_y(PI)  # Flip 180 degrees to face forward
-	
-func choose_new_direction():
-	# Pick a new random horizontal direction
-	var angle = randf() * TAU  # 0 to 2π
-	target_direction = Vector3(sin(angle), 0, cos(angle)).normalized()
-	change_timer = randf_range(2.0, 5.0)  # New direction every 2–5 seconds
+
+	# rotate to face movement
+	var horiz_vel = Vector3(velocity.x, 0.0, velocity.z)
+	if horiz_vel.length() > 0.1:
+		look_at(global_position + horiz_vel.normalized(), Vector3.UP)
+		rotate_y(PI)
+
+func _on_dir_timer_timeout() -> void:
+	# Every 2–5s this picks a new random heading
+	dir_timer.wait_time = randf_range(2.0, 5.0)
+	var angle = randf() * TAU
+	move_dir = Vector3(cos(angle), 0.0, sin(angle))

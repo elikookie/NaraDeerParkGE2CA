@@ -1,23 +1,19 @@
 extends Node3D
+
 @export var deer_scene: PackedScene
 @export var number_of_deer: int = 5
+@onready var deer_container: Node3D = $DeerContainer
 
-func spawn_deer():
-	for i in range(number_of_deer):
-		var deer_instance = deer_scene.instantiate()
-		var x = randf_range(-10, 10)
-		var z = randf_range(-10, 10)
-		
-		deer_instance.position = Vector3(x, 5, z)
-		
-		get_node("DeerContainer").add_child(deer_instance)
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	randomize()
 	spawn_deer()
-	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func spawn_deer() -> void:
+	for i in range(number_of_deer):
+		var deer = deer_scene.instantiate()
+		deer_container.add_child(deer)
+		# now that it's in the tree, it's safe to set its transform:
+		var x = randf_range(-5.0, 5.0)
+		var z = randf_range(-5.0, 5.0)
+		deer.global_transform.origin = Vector3(x, 0.0, z)
+		
