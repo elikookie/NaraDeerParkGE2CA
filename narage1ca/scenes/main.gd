@@ -1,6 +1,6 @@
 extends Node3D
 @export var deer_scene: PackedScene
-@export var number_of_deer: int = 10
+@export var number_of_deer: int = 5
 
 func spawn_deer():
 	for i in range(number_of_deer):
