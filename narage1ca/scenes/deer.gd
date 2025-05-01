@@ -7,6 +7,7 @@ var gravity := 9.8
 
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
 @onready var dir_timer: Timer = $DirectionTimer
+@onready var obstacle_ray: RayCast3D = $ObstacleRay
 
 var speed: float
 var move_dir: Vector3 = Vector3.ZERO
@@ -16,13 +17,14 @@ func _ready() -> void:
 	speed = randf_range(min_speed, max_speed)
 	anim_player.play("walk")
 
-	# Configure and start our direction‐change timer
+	#direction timer
 	dir_timer.one_shot = false
 	dir_timer.wait_time = randf_range(2.0, 5.0)
 	dir_timer.start()
 	dir_timer.timeout.connect(_on_dir_timer_timeout)
-
 	_on_dir_timer_timeout()
+
+	obstacle_ray.enabled = true
 
 func _physics_process(delta: float) -> void:
 	# gravity
@@ -30,7 +32,13 @@ func _physics_process(delta: float) -> void:
 		velocity.y -= gravity * delta
 	else:
 		velocity.y = 0.0
-
+		
+	# proactive avoidance
+	if obstacle_ray.is_colliding():
+		move_dir = -move_dir
+		# reset the timer so we don’t immediately pick a brand-new random dir
+		dir_timer.start(randf_range(1.0, 2.0))
+		
 	# move
 	velocity.x = move_dir.x * speed
 	velocity.z = move_dir.z * speed
@@ -44,6 +52,6 @@ func _physics_process(delta: float) -> void:
 
 func _on_dir_timer_timeout() -> void:
 	# Every 2–5s this picks a new random heading
-	dir_timer.wait_time = randf_range(2.0, 5.0)
+	dir_timer.wait_time = randf_range(10.0, 30.0)
 	var angle = randf() * TAU
 	move_dir = Vector3(cos(angle), 0.0, sin(angle))
