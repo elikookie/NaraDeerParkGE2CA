@@ -1,9 +1,9 @@
 [gd_scene load_steps=65 format=4 uid="uid://faj6l2m0t4dj"]
 
+[ext_resource type="Script" uid="uid://fdamq3o3hdtg" path="res://scenes/main.gd" id="1_jscy8"]
 [ext_resource type="PackedScene" uid="uid://bgh8eybyv44gd" path="res://scenes/tree.tscn" id="1_o5qli"]
-[ext_resource type="Texture2D" uid="uid://dppye6iiq44y8" path="res://assets/materials/Grass004_4K-PNG/Grass004_4K-PNG_Color.png" id="2_jyhfs"]
-[ext_resource type="Texture2D" uid="uid://dexxnqb24jndl" path="res://assets/materials/Grass004_4K-PNG/Grass004_4K-PNG_NormalGL.png" id="3_tbgi4"]
-[ext_resource type="Texture2D" uid="uid://d1kcwxn55r3r2" path="res://assets/materials/Grass004_4K-PNG/Grass004_4K-PNG_Roughness.png" id="4_tefeu"]
+[ext_resource type="PackedScene" uid="uid://bpqulhlxa6haq" path="res://scenes/deer.tscn" id="2_pm3ni"]
+[ext_resource type="Material" uid="uid://dkah2efh2egsk" path="res://assets/materials/Grass004_4K-PNG/grass.tres" id="3_yc10j"]
 [ext_resource type="Texture2D" uid="uid://1vbg5geiqa1v" path="res://assets/models/grass-free-download/textures/grasspng.png" id="5_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://rjfuu4dhduk" path="res://assets/models/japanese-torii-gate-game-asset/textures/albedo7v1.png" id="6_choun"]
 [ext_resource type="Texture2D" uid="uid://dukaph8jvmqta" path="res://assets/models/japanese-torii-gate-game-asset/textures/bramaa_occlusion.png" id="7_ya4ey"]
@@ -38,11 +38,8 @@ sky = SubResource("Sky_0wfyh")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0wfyh"]
-albedo_texture = ExtResource("2_jyhfs")
-roughness_texture = ExtResource("4_tefeu")
-normal_enabled = true
-normal_texture = ExtResource("3_tbgi4")
+[sub_resource type="BoxShape3D" id="BoxShape3D_pm3ni"]
+size = Vector3(50, 1, 50)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k0qqk"]
 resource_name = "02 - Default"
@@ -712,6 +709,8 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_eyiss")
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_jscy8")
+deer_scene = ExtResource("2_pm3ni")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.702143, -0.710716, -0.0433337, 0.657472, 0.623771, 0.422658, -0.27336, -0.325257, 0.905253, -17.2118, 16.6462, 27.2065)
@@ -721,9 +720,14 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_sugp2")
 
-[node name="ground" type="CSGBox3D" parent="."]
+[node name="ground" type="StaticBody3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="ground"]
 size = Vector3(50, 1, 50)
-material = SubResource("StandardMaterial3D_0wfyh")
+material = ExtResource("3_yc10j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ground"]
+shape = SubResource("BoxShape3D_pm3ni")
 
 [node name="trees" type="Node3D" parent="."]
 
@@ -1538,3 +1542,8 @@ skeleton = NodePath("")
 transform = Transform3D(143.828, 0, 0, 0, -1.71456e-05, 143.828, 0, -143.828, -1.71456e-05, 9.23015, 2.17756, 15.5224)
 mesh = SubResource("ArrayMesh_rgv8a")
 skeleton = NodePath("")
+
+[node name="DeerContainer" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.0332293, 0.741121, -0.670549, -0.0366816, 0.671371, 0.740213, 0.998774, 3.63767e-09, 0.0494947, -24.9562, 18.5188, 1.1254)
