@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="NaraGE1CA"
+run/main_scene="uid://faj6l2m0t4dj"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"

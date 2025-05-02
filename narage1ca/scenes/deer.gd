@@ -18,6 +18,7 @@ var state: String = "wander"
 var is_flock_leader: bool = false
 var flock_leader: Node3D = null
 var flock_timer: float = 0.0
+var is_turning_in_place := false
 
 func _ready():
 	randomize()
@@ -141,20 +142,32 @@ func start_turn(dir: Vector3):
 	dir_timer.stop()
 
 func do_smooth_turn(delta: float):
-	var current_yaw = rotation.y
-	var diff = wrapf(target_yaw - current_yaw, -PI, PI)
-	var step = turn_speed * delta
+	var desired_dir = target_dir.normalized()
+	var facing_target = global_transform.looking_at(global_position + desired_dir, Vector3.UP)
 
-	if abs(diff) <= step:
-		rotation.y = target_yaw
-		move_dir = target_dir
+	# Flip model if needed (if your deer faces -Z in model space)
+	var target_basis = facing_target.basis.rotated(Vector3.UP, PI)
+
+	var current_quat = global_transform.basis.get_rotation_quaternion()
+	var target_quat = target_basis.get_rotation_quaternion()
+
+	var smooth_quat = current_quat.slerp(target_quat, turn_speed * delta)
+
+	global_transform.basis = Basis(smooth_quat)
+
+	# Check if we're done turning
+	if current_quat.dot(target_quat) > 0.999:
+		move_dir = desired_dir
 		start_wander()
-	else:
-		rotation.y += sign(diff) * step
 
 func rotate_toward_direction(delta: float):
 	var horiz = Vector3(velocity.x, 0, velocity.z)
 	if horiz.length() > 0.1:
 		var target = global_transform.looking_at(global_position + horiz.normalized(), Vector3.UP)
-		var target_basis = target.basis.rotated(Vector3.UP, PI)  # flip model
-		global_transform.basis = global_transform.basis.slerp(target_basis, turn_speed * delta)
+		var target_basis = target.basis.rotated(Vector3.UP, PI)
+
+		var current_quat = global_transform.basis.get_rotation_quaternion()
+		var target_quat = target_basis.get_rotation_quaternion()
+
+		var smooth_quat = current_quat.slerp(target_quat, turn_speed * delta)
+		global_transform.basis = Basis(smooth_quat)
