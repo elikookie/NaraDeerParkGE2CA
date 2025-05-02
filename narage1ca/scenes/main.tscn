@@ -1958,6 +1958,3 @@ mesh = SubResource("CapsuleMesh_yc10j")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MC"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.507109, 0)
 shape = SubResource("ConvexPolygonShape3D_a82wo")
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.0332293, 0.741121, -0.670549, -0.0366816, 0.671371, 0.740213, 0.998774, 3.63767e-09, 0.0494947, -24.9562, 18.5188, 1.1254)
