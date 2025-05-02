@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var deer_scene: PackedScene
-@export var number_of_deer: int = 5
+@export var number_of_deer: int = 10
 @onready var deer_container: Node3D = $DeerContainer
 
 func _ready() -> void:
