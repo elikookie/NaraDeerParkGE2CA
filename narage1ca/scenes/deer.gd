@@ -100,8 +100,7 @@ func _do_smooth_turn(delta: float) -> void:
 	rotation.y += sign(diff) * step
 
 func _on_dir_timer_timeout() -> void:
-	# pick a brand-new heading every 2–5s, but only when wandering
 	if state == "wander":
-		dir_timer.wait_time = randf_range(10.0, 15.0)
+		dir_timer.wait_time = randf_range(20.0, 35.0)
 		var ang = randf() * TAU
 		move_dir = Vector3(cos(ang), 0, sin(ang)).normalized()
