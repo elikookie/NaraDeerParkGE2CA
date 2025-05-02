@@ -13,7 +13,7 @@ func spawn_deer() -> void:
 		var deer = deer_scene.instantiate()
 		deer_container.add_child(deer)
 		# now that it's in the tree, it's safe to set its transform:
-		var x = randf_range(-5.0, 5.0)
-		var z = randf_range(-5.0, 5.0)
+		var x = randf_range(-10.0, 15.0)
+		var z = randf_range(-10.0, 15.0)
 		deer.global_transform.origin = Vector3(x, 0.0, z)
 		
