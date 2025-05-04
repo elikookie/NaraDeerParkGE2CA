@@ -1,4 +1,4 @@
-[gd_scene load_steps=118 format=4 uid="uid://faj6l2m0t4dj"]
+[gd_scene load_steps=117 format=4 uid="uid://faj6l2m0t4dj"]
 
 [ext_resource type="PackedScene" uid="uid://bgh8eybyv44gd" path="res://scenes/tree.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://bpqulhlxa6haq" path="res://scenes/deer.tscn" id="2_pm3ni"]
@@ -223,9 +223,6 @@ normal_enabled = true
 normal_texture = ExtResource("9_trceg")
 ao_enabled = true
 ao_texture = ExtResource("7_ya4ey")
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1epgm"]
-points = PackedVector3Array(-2.39112, -0.0793942, -0.00294353, -2.39112, 0.0792426, -0.00294353, -2.34678, -0.231516, -0.00294353, -4.35331, -0.743335, 7.31796, -2.34678, 0.231364, -0.00294353, -4.35331, 0.743184, 7.31796, -2.26065, -0.365001, -0.00294353, -4.35586, -0.752729, 7.34762, -2.26065, 0.364849, -0.00294353, -4.35586, 0.752578, 7.34762, -2.14126, -0.468789, -0.00294353, -4.34307, -0.762123, 7.37494, -4.34734, -0.043182, 7.95874, -4.34734, -5.96046e-08, 7.96966, -1.9963, -0.534698, -0.00294353, -2.14126, 0.468638, -0.00294353, -4.34734, 0.0430304, 7.95874, -4.34307, 0.761972, 7.37494, -1.9963, 0.534547, -0.00294353, -4.31749, -0.768942, 7.39133, -4.28594, -0.771214, 7.39367, 4.34648, -0.043182, 7.95874, 4.34648, -5.96046e-08, 7.97044, -1.83939, -0.557274, -0.00294353, -4.28594, 0.771063, 7.39367, -4.31749, 0.76879, 7.39133, 4.34648, 0.0430304, 7.95874, -1.83939, 0.557123, -0.00294353, -3.90476, -0.773942, 7.33825, 4.28508, -0.771214, 7.39367, 4.31664, -0.768942, 7.39133, 4.34222, -0.762123, 7.37494, 4.35586, -0.752729, 7.34762, 4.35586, 0.752578, 7.34762, 0, -0.773942, 7.01592, -1.56224, -0.773942, 7.05806, -1.95025, -0.773942, 7.07367, -2.34678, -0.773942, 7.09553, -3.1279, -0.773942, 7.2126, 1.83854, -0.557274, -0.00294353, -3.90476, 0.77379, 7.33825, 4.28508, 0.771063, 7.39367, 4.34222, 0.761972, 7.37494, 4.31664, 0.76879, 7.39133, -3.1279, 0.77379, 7.2126, -2.34678, 0.77379, 7.09553, -1.95025, 0.773941, 7.07367, -0.39653, 0.773941, 7.02762, 0, 0.773941, 7.01592, 1.83854, 0.557123, -0.00294353, 3.9039, -0.773942, 7.33825, 1.99544, -0.534698, -0.00294353, 4.35245, -0.743335, 7.31796, 2.14041, -0.468789, -0.00294353, 2.2598, -0.365001, -0.00294353, 2.34592, -0.231516, -0.00294353, 4.35245, 0.743184, 7.31796, 2.34592, 0.231364, -0.00294353, 2.2598, 0.364849, -0.00294353, 2.14041, 0.468638, -0.00294353, 1.99544, 0.534547, -0.00294353, 1.56139, -0.773942, 7.05806, 3.12705, -0.773942, 7.2126, 2.34592, -0.773942, 7.09553, 1.94939, -0.773942, 7.07367, 3.9039, 0.77379, 7.33825, 1.94939, 0.773941, 7.07367, 0.395678, 0.773941, 7.02762, 2.34592, 0.77379, 7.09553, 3.12705, 0.77379, 7.2126, 2.39027, -0.0793942, -0.00294353, 2.39027, 0.0792426, -0.00294353)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dq8of"]
 resource_name = "MainWood"
@@ -1458,15 +1455,10 @@ skeleton = NodePath("")
 transform = Transform3D(0.0692167, 0, -0.997602, 0, 1, 0, 0.997602, 0, 0.0692167, -20.7743, 0, -1.08433)
 
 [node name="Cube_014" type="MeshInstance3D" parent="tori"]
-transform = Transform3D(0.998386, 0.0567973, 6.77075e-09, 0, -1.19209e-07, 1, 0.0567973, -0.998386, -1.19017e-07, 1.73036, 0, 0.120062)
+transform = Transform3D(2.7361, 0.124558, 1.7079e-08, 0, -2.61429e-07, 2.52247, 0.155655, -2.18949, -3.00217e-07, 1.73036, 0, 0.120062)
 mesh = SubResource("ArrayMesh_ymqb1")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_jkv2x")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="tori/Cube_014"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="tori/Cube_014/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_1epgm")
 
 [node name="JapaneseFencePieces" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7848, 0, 3.67091)
@@ -1971,19 +1963,19 @@ shape = SubResource("ConvexPolygonShape3D_mlv25")
 [node name="DeerContainer" type="Node3D" parent="."]
 
 [node name="MC" type="CharacterBody3D" parent="."]
-transform = Transform3D(0.0203665, 0, -0.999793, 0, 1, 0, 0.999793, 0, 0.0203665, -24.259, 1.01744, 0)
+transform = Transform3D(0.0203665, 0, -0.999793, 0, 1, 0, 0.999793, 0, 0.0203665, -24.259, 1.54962, 0)
 script = ExtResource("21_yc10j")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="MC"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.507109, 0)
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0.507109, 0)
 mesh = SubResource("CapsuleMesh_yc10j")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MC"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.507109, 0)
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0.507109, 0)
 shape = SubResource("ConvexPolygonShape3D_a82wo")
 
 [node name="Head" type="Node3D" parent="MC"]
-transform = Transform3D(0.904812, 0, 0.425811, 0, 1, 0, -0.425811, 0, 0.904812, 0.0491219, 1.01216, 0.00291061)
+transform = Transform3D(0.904812, 0, 0.425811, 0, 1, 0, -0.425811, 0, 0.904812, 0.0491219, 1.9395, 0.00291061)
 
 [node name="Camera3D" type="Camera3D" parent="MC/Head"]
 transform = Transform3D(0.87549, 0, -0.483237, 0, 1, 0, 0.483237, 0, 0.87549, 0, 0, 0)
