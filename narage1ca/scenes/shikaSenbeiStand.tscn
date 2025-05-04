@@ -1,4 +1,4 @@
-[gd_scene load_steps=142 format=4 uid="uid://qn7usvhukmd8"]
+[gd_scene load_steps=143 format=4 uid="uid://qn7usvhukmd8"]
 
 [ext_resource type="Texture2D" uid="uid://icsrx0k3q7pw" path="res://assets/models/cookiesBase Color.png" id="1_6bxcx"]
 [ext_resource type="Texture2D" uid="uid://2cqyej6phgfi" path="res://assets/models/SignBaseColor.png" id="1_khqta"]
@@ -1523,6 +1523,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_yvcl3")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_soo6l"]
+size = Vector3(1, 0.934082, 2.16687)
+
 [node name="Node3D" type="Node3D"]
 
 [node name="shikaSenbeiStandOriginalModelHehe" type="Node3D" parent="."]
@@ -1741,3 +1744,7 @@ transform = Transform3D(82.3077, 8.99707, 1.24069e-07, 0, 0, 11.1015, 8.99707, -
 material_override = SubResource("StandardMaterial3D_3ns8y")
 mesh = SubResource("ArrayMesh_48m2n")
 skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shikaSenbeiStandOriginalModelHehe"]
+transform = Transform3D(2.52748, 0, 0, 0, 4.52867, 0, 0, 0, 1.91184, 0, 2.04647, -0.386561)
+shape = SubResource("BoxShape3D_soo6l")
