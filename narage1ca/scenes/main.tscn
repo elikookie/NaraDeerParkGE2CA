@@ -1,4 +1,4 @@
-[gd_scene load_steps=117 format=4 uid="uid://faj6l2m0t4dj"]
+[gd_scene load_steps=118 format=4 uid="uid://faj6l2m0t4dj"]
 
 [ext_resource type="PackedScene" uid="uid://bgh8eybyv44gd" path="res://scenes/tree.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://bpqulhlxa6haq" path="res://scenes/deer.tscn" id="2_pm3ni"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://c0gupdb3kflvb" path="res://assets/models/japanese-stone-lanterntoro/textures/SO_003_Testing_Final_SO_003_Mid_BaseColor.png" id="20_yq6so"]
 [ext_resource type="Texture2D" uid="uid://bop7v3t7i7pn5" path="res://assets/models/japanese-stone-lanterntoro/textures/SO_003_Testing_Final_SO_003_Top_BaseColor.png" id="21_fv21b"]
 [ext_resource type="Script" uid="uid://b1xqxsbwmjr84" path="res://scenes/mc.gd" id="21_yc10j"]
+[ext_resource type="PackedScene" uid="uid://qn7usvhukmd8" path="res://scenes/shikaSenbeiStand.tscn" id="22_jscy8"]
 
 [sub_resource type="GDScript" id="GDScript_gqmmt"]
 script/source = "extends Node3D
@@ -1979,3 +1980,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0491219, 1.9395, 0.00291061
 
 [node name="Camera3D" type="Camera3D" parent="MC/Head"]
 transform = Transform3D(0.87549, 0, -0.483237, 0, 1, 0, 0.483237, 0, 0.87549, 0, 0, 0)
+
+[node name="deerCookieStand" parent="." instance=ExtResource("22_jscy8")]
+transform = Transform3D(-0.737478, 0, 0.675372, 0, 1, 0, -0.675372, 0, -0.737478, -15.9521, 0.685392, 4.80433)
