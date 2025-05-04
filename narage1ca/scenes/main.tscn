@@ -1963,7 +1963,7 @@ shape = SubResource("ConvexPolygonShape3D_mlv25")
 [node name="DeerContainer" type="Node3D" parent="."]
 
 [node name="MC" type="CharacterBody3D" parent="."]
-transform = Transform3D(0.0203665, 0, -0.999793, 0, 1, 0, 0.999793, 0, 0.0203665, -24.259, 1.54962, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.259, 1.54962, 0)
 script = ExtResource("21_yc10j")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="MC"]
@@ -1975,7 +1975,7 @@ transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0.507109, 0)
 shape = SubResource("ConvexPolygonShape3D_a82wo")
 
 [node name="Head" type="Node3D" parent="MC"]
-transform = Transform3D(0.904812, 0, 0.425811, 0, 1, 0, -0.425811, 0, 0.904812, 0.0491219, 1.9395, 0.00291061)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0491219, 1.9395, 0.00291061)
 
 [node name="Camera3D" type="Camera3D" parent="MC/Head"]
 transform = Transform3D(0.87549, 0, -0.483237, 0, 1, 0, 0.483237, 0, 0.87549, 0, 0, 0)
