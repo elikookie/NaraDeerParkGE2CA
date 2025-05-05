@@ -7,6 +7,21 @@
 shader = ExtResource("2_rs1x6")
 shader_parameter/lod = 0.0
 
+[sub_resource type="Animation" id="Animation_um5f7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="Animation" id="Animation_rs1x6"]
 resource_name = "blur"
 length = 0.3
@@ -21,21 +36,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 0.738]
-}
-
-[sub_resource type="Animation" id="Animation_um5f7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_elpo3"]
@@ -82,14 +82,52 @@ layout_mode = 2
 
 [node name="Volume_Label" type="Label" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
-text = "Volume"
-
-[node name="Volume" type="HSlider" parent="PanelContainer/VBoxContainer"]
-layout_mode = 2
+text = "
+Volume"
 
 [node name="Mute" type="CheckBox" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 text = " Mute"
+
+[node name="Volume" type="HSlider" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="DeerNumLabel" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "
+Deer Amount"
+
+[node name="AddDeer" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Add 1 Deer to the scene"
+
+[node name="WalkSPeed" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "
+Walk Speed"
+
+[node name="WalkSpeed" type="HSlider" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "
+Deer State"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="OptionButton" type="OptionButton" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+item_count = 4
+popup/item_0/text = "Wander"
+popup/item_0/id = 0
+popup/item_1/text = "Hungry"
+popup/item_1/id = 1
+popup/item_2/text = "Graze"
+popup/item_2/id = 2
+popup/item_3/text = "Flock"
+popup/item_3/id = 3
 
 [node name="Resume" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
@@ -104,7 +142,10 @@ libraries = {
 &"": SubResource("AnimationLibrary_elpo3")
 }
 
-[connection signal="value_changed" from="PanelContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
 [connection signal="toggled" from="PanelContainer/VBoxContainer/Mute" to="." method="_on_mute_toggled"]
+[connection signal="value_changed" from="PanelContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/AddDeer" to="." method="_on_add_deer_pressed"]
+[connection signal="value_changed" from="PanelContainer/VBoxContainer/WalkSpeed" to="." method="_on_walk_speed_value_changed"]
+[connection signal="item_selected" from="PanelContainer/VBoxContainer/HBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="toggled" from="PanelContainer/VBoxContainer/Quit" to="." method="_on_quit_toggled"]

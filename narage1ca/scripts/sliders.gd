@@ -48,3 +48,46 @@ func _process(delta: float) -> void:
 
 func _on_quit_toggled(toggled_on: bool) -> void:
 	pass # Replace with function body.
+
+
+func _on_deer_number_value_changed(count: int) -> void:
+	pass
+	#var current_deer = get_tree().get_nodes_in_group("deer")
+	#var parent = current_deer[0].get_parent() if current_deer.size() > 0 else get_node("/root/Main/DeerContainer")
+	#var deer_scene = preload("res://scenes/deer.tscn")
+#
+	## Add or remove deer
+	#while current_deer.size() < count:
+		#var d = deer_scene.instantiate()
+		#parent.add_child(d)
+		#current_deer = get_tree().get_nodes_in_group("deer")
+	#while current_deer.size() > count:
+		#current_deer[0].queue_free()
+		#current_deer = get_tree().get_nodes_in_group("deer")
+
+
+func _on_walk_speed_value_changed(value: float) -> void:
+	for deer in get_tree().get_nodes_in_group("deer"):
+		deer.speed = clamp(value, deer.min_speed, deer.max_speed)
+
+
+func _on_option_button_item_selected(index: int) -> void:
+	var state = ["wander", "hungry", "graze", "flock"][index]
+	for deer in get_tree().get_nodes_in_group("deer"):
+		match state:
+			"wander":
+				deer.start_wander()
+			"hungry":
+				deer.start_hungry()
+			"graze":
+				deer.start_graze()
+			"flock":
+				deer.become_flock_leader()
+
+
+func _on_add_deer_pressed() -> void:
+	var deer_scene = preload("res://scenes/deer.tscn")
+	var deer_parent = get_node("DeerContainer")
+
+	var deer = deer_scene.instantiate()
+	deer_parent.add_child(deer)

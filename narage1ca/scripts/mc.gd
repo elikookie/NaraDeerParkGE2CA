@@ -5,12 +5,12 @@ class_name Player
 @export_subgroup("Movement")
 @export var speed = 8.0
 @export var accel = 16.0
-@export var jump = 8.0
+@export var jump = 4
 
 @export_subgroup("Camera")
-@export var sensitivity = 0.2
-@export var min_angle = -80
-@export var max_angle = 90
+@export var sensitivity = 0.1
+@export var min_angle = -60
+@export var max_angle = 60
 
 @onready var head = $Head
 @onready var collision_shape = $CollisionShape3D
@@ -74,8 +74,6 @@ func _physics_process(delta):
 	look_rot.y += rad_to_deg(plat_rot.y * delta)
 	head.rotation_degrees.x = look_rot.x
 	rotation_degrees.y = look_rot.y
-	
-
 
 func _input(event):
 	if event is InputEventMouseMotion and moving:
