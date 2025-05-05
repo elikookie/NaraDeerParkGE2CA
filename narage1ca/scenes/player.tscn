@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://pl6vkch3v2xv"]
+[gd_scene load_steps=7 format=3 uid="uid://pl6vkch3v2xv"]
 
 [ext_resource type="Script" uid="uid://b1xqxsbwmjr84" path="res://scripts/mc.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://cqe10jiyydbl1" path="res://scenes/interact_ray.tscn" id="2_g2els"]
 [ext_resource type="Script" uid="uid://bcauixc7mores" path="res://scripts/ui.gd" id="3_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://udjrentki371" path="res://assets/sounds/eating-sound-effect-36186.mp3" id="4_dqkch"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_g2els"]
 
@@ -39,3 +40,6 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 32
+
+[node name="FeedStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_dqkch")

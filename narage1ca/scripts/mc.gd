@@ -45,6 +45,7 @@ func _physics_process(delta):
 			if distance < deer.bow_distance and dot_val > 0.7 and GameState.get_value("cookie") > 0:
 						# Feed one deer...
 						GameState.set_value("cookie", GameState.get_value("cookie") - 1)
+						$FeedStreamPlayer3D.play()
 						# **all** hungry deer if out of cookies:
 						if GameState.get_value("cookie") <= 0:
 							for d in get_tree().get_nodes_in_group("deer"):

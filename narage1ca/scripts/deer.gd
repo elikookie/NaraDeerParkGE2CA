@@ -58,6 +58,7 @@ func _physics_process(delta: float):
 				velocity.x = move_dir.x * speed
 				velocity.z = move_dir.z * speed
 				rotate_toward_direction(delta)
+				$LeavesStreamPlayer.play()
 
 		"turning":
 			do_smooth_turn(delta)

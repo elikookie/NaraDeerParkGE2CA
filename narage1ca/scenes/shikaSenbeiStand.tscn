@@ -1,4 +1,4 @@
-[gd_scene load_steps=145 format=4 uid="uid://qn7usvhukmd8"]
+[gd_scene load_steps=146 format=4 uid="uid://qn7usvhukmd8"]
 
 [ext_resource type="Texture2D" uid="uid://icsrx0k3q7pw" path="res://assets/models/cookiesBase Color.png" id="1_6bxcx"]
 [ext_resource type="Texture2D" uid="uid://2cqyej6phgfi" path="res://assets/models/SignBaseColor.png" id="1_khqta"]
@@ -6,6 +6,7 @@
 [ext_resource type="Material" uid="uid://ckj7m8mnodo4i" path="res://assets/materials/metal.tres" id="1_soo6l"]
 [ext_resource type="Texture2D" uid="uid://cfuyio0yqtjtm" path="res://assets/models/lidBaseColor.png" id="3_a2aqr"]
 [ext_resource type="Script" uid="uid://2ri6s3uwsdw0" path="res://scripts/shika_senbei_stand.gd" id="6_2uav1"]
+[ext_resource type="AudioStream" uid="uid://bjno61l25ds0c" path="res://assets/sounds/cash-register-purchase-87313.mp3" id="7_jw2xs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_alxy8"]
 resource_name = "Material"
@@ -1756,5 +1757,9 @@ prompt_message = "Pick Up Cookies"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ShikaSenbeiStand"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_2uav1")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="ShikaSenbeiStand"]
+transform = Transform3D(1.55327, 0, 0, 0, 1.7467, 0, 0, 0, 1.76091, 0, -2.53879, 0)
+stream = ExtResource("7_jw2xs")
 
 [connection signal="interacted" from="ShikaSenbeiStand" to="ShikaSenbeiStand" method="_on_interacted"]
