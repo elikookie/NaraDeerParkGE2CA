@@ -1,4 +1,4 @@
-[gd_scene load_steps=143 format=4 uid="uid://qn7usvhukmd8"]
+[gd_scene load_steps=144 format=4 uid="uid://qn7usvhukmd8"]
 
 [ext_resource type="Texture2D" uid="uid://icsrx0k3q7pw" path="res://assets/models/cookiesBase Color.png" id="1_6bxcx"]
 [ext_resource type="Texture2D" uid="uid://2cqyej6phgfi" path="res://assets/models/SignBaseColor.png" id="1_khqta"]
@@ -1523,229 +1523,233 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_yvcl3")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_soo6l"]
-size = Vector3(1, 0.934082, 2.16687)
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_soo6l"]
 
-[node name="Node3D" type="Node3D"]
-transform = Transform3D(0.285285, 0, 0, 0, 0.309892, 0, 0, 0, 0.287958, 0, 0, 0)
+[sub_resource type="BoxShape3D" id="BoxShape3D_2uav1"]
 
-[node name="shikaSenbeiStandOriginalModelHehe" type="Node3D" parent="."]
+[node name="shikaSenbeiStandOriginalModelHehe" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.187061, 0, 0.365885)
 
-[node name="Cube" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="Cube" type="MeshInstance3D" parent="."]
 transform = Transform3D(100, 0, 0, 0, -1.81104e-05, 7.68352, 0, -151.921, -9.15946e-07, 0, 1.88442, 0.1411)
 material_override = ExtResource("1_soo6l")
 mesh = SubResource("ArrayMesh_7uo0r")
 skeleton = NodePath("")
 
-[node name="Cube_001" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="Cube_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(82.0099, 0, 0, 0, -177.135, 2.19136, 0, -83.2022, -4.66534, 0, 1.88442, -1.46959)
 material_override = SubResource("StandardMaterial3D_oev2t")
 mesh = SubResource("ArrayMesh_ny6en")
 skeleton = NodePath("")
 
-[node name="box" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="box" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.79265, -82.7786, -0.000359134, 2.46757e-06, -0.000552736, 53.321, -82.7786, -1.79266, -6.35636e-06, 0, 2.48519, 0.353921)
 material_override = SubResource("StandardMaterial3D_fj0nf")
 mesh = SubResource("ArrayMesh_uuyvq")
 skeleton = NodePath("")
 
-[node name="cookies" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies" type="MeshInstance3D" parent="."]
 transform = Transform3D(14.5705, -14.5212, 0, 0, 0, 10.5311, -14.5212, -14.5705, 0, -0.0852223, 3.15901, 0.933678)
 material_override = SubResource("StandardMaterial3D_q8quj")
 mesh = SubResource("ArrayMesh_rcik8")
 skeleton = NodePath("")
 
-[node name="cookies_001" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(14.5705, -14.5212, 0, 0, 0, 10.5311, -14.5212, -14.5705, 0, -0.340771, 3.13541, 0.600472)
 material_override = SubResource("StandardMaterial3D_wipnl")
 mesh = SubResource("ArrayMesh_u1mf6")
 skeleton = NodePath("")
 
-[node name="cookies_002" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(14.5705, -14.5212, 0, 0, 0, 10.5311, -14.5212, -14.5705, 0, -0.267247, 3.15901, 0.0154688)
 material_override = SubResource("StandardMaterial3D_0r2k6")
 mesh = SubResource("ArrayMesh_5cv7l")
 skeleton = NodePath("")
 
-[node name="cookies_003" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_003" type="MeshInstance3D" parent="."]
 transform = Transform3D(14.5705, -14.5212, 0, 0, 0, 10.5311, -14.5212, -14.5705, 0, -0.592968, 3.15901, 0.269353)
 material_override = SubResource("StandardMaterial3D_8j665")
 mesh = SubResource("ArrayMesh_6vxp7")
 skeleton = NodePath("")
 
-[node name="cookies_004" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_004" type="MeshInstance3D" parent="."]
 transform = Transform3D(14.5705, -14.5212, 0, 0, 0, 10.5311, -14.5212, -14.5705, 0, -0.01505, 3.18935, 0.346588)
 mesh = SubResource("ArrayMesh_1d3jg")
 skeleton = NodePath("")
 
-[node name="cookies_005" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_005" type="MeshInstance3D" parent="."]
 transform = Transform3D(14.5705, -14.5212, 0, 0, 0, 10.5311, -14.5212, -14.5705, 0, 0.240499, 3.15901, 0.679794)
 material_override = SubResource("StandardMaterial3D_dmtr0")
 mesh = SubResource("ArrayMesh_lw5do")
 skeleton = NodePath("")
 
-[node name="cookies_006" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_006" type="MeshInstance3D" parent="."]
 transform = Transform3D(14.5705, -14.5212, 0, 0, 0, 10.5311, -14.5212, -14.5705, 0, 0.575877, 3.15901, 0.429147)
 material_override = SubResource("StandardMaterial3D_vc34h")
 mesh = SubResource("ArrayMesh_5n7l5")
 skeleton = NodePath("")
 
-[node name="cookies_007" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_007" type="MeshInstance3D" parent="."]
 transform = Transform3D(14.5705, -14.5212, 0, 0, 0, 10.5311, -14.5212, -14.5705, 0, 0.320328, 3.1534, 0.0959413)
 material_override = SubResource("StandardMaterial3D_igjy4")
 mesh = SubResource("ArrayMesh_ol1xg")
 skeleton = NodePath("")
 
-[node name="cookies_008" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_008" type="MeshInstance3D" parent="."]
 transform = Transform3D(14.5705, -14.5212, 0, 0, 0, 10.5311, -14.5212, -14.5705, 0, 0.0681309, 3.15901, -0.235178)
 material_override = SubResource("StandardMaterial3D_65cu0")
 mesh = SubResource("ArrayMesh_fbgbl")
 skeleton = NodePath("")
 
-[node name="cookies_009" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_009" type="MeshInstance3D" parent="."]
 transform = Transform3D(19.8981, 5.21843, 0, 6.13063e-07, -2.45225e-06, 10.5311, 5.21843, -19.8981, -1.2554e-06, 0.532489, 3.36779, 0.12106)
 material_override = SubResource("StandardMaterial3D_ymrs3")
 mesh = SubResource("ArrayMesh_o63nr")
 skeleton = NodePath("")
 
-[node name="cookies_010" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_010" type="MeshInstance3D" parent="."]
 transform = Transform3D(19.8981, 5.21843, 0, 6.13063e-07, -2.45225e-06, 10.5311, 5.21843, -19.8981, -1.2554e-06, 0.374526, 3.37239, 0.506145)
 material_override = SubResource("StandardMaterial3D_kfwvx")
 mesh = SubResource("ArrayMesh_gxguf")
 skeleton = NodePath("")
 
-[node name="cookies_011" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_011" type="MeshInstance3D" parent="."]
 transform = Transform3D(19.8981, 5.21843, 0, 6.13063e-07, -2.45225e-06, 10.5311, 5.21843, -19.8981, -1.2554e-06, 0.216459, 3.36779, 0.895178)
 material_override = SubResource("StandardMaterial3D_6bxcx")
 mesh = SubResource("ArrayMesh_o1ta6")
 skeleton = NodePath("")
 
-[node name="cookies_012" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_012" type="MeshInstance3D" parent="."]
 transform = Transform3D(19.8981, 5.21843, 0, 6.13063e-07, -2.45225e-06, 10.5311, 5.21843, -19.8981, -1.2554e-06, -0.169444, 3.36779, 0.732757)
 material_override = SubResource("StandardMaterial3D_a2aqr")
 mesh = SubResource("ArrayMesh_p1tex")
 skeleton = NodePath("")
 
-[node name="cookies_013" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_013" type="MeshInstance3D" parent="."]
 transform = Transform3D(19.8981, 5.21843, 0, 6.13063e-07, -2.45225e-06, 10.5311, 5.21843, -19.8981, -1.2554e-06, -0.0113776, 3.37239, 0.343725)
 material_override = SubResource("StandardMaterial3D_8badq")
 mesh = SubResource("ArrayMesh_g16ng")
 skeleton = NodePath("")
 
-[node name="cookies_014" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_014" type="MeshInstance3D" parent="."]
 transform = Transform3D(19.8981, 5.21843, 0, 6.13063e-07, -2.45225e-06, 10.5311, 5.21843, -19.8981, -1.2554e-06, -0.237223, 3.36779, -0.193815)
 material_override = SubResource("StandardMaterial3D_wcxn6")
 mesh = SubResource("ArrayMesh_oxq5e")
 skeleton = NodePath("")
 
-[node name="cookies_015" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_015" type="MeshInstance3D" parent="."]
 transform = Transform3D(19.8981, 5.21843, 0, 6.13063e-07, -2.45225e-06, 10.5311, 5.21843, -19.8981, -1.2554e-06, 0.146586, 3.36779, -0.0413609)
 material_override = SubResource("StandardMaterial3D_utnq0")
 mesh = SubResource("ArrayMesh_mmyi0")
 skeleton = NodePath("")
 
-[node name="cookies_016" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_016" type="MeshInstance3D" parent="."]
 transform = Transform3D(19.8981, 5.21843, 0, 6.13063e-07, -2.45225e-06, 10.5311, 5.21843, -19.8981, -1.2554e-06, -0.395186, 3.37239, 0.191271)
 material_override = SubResource("StandardMaterial3D_bqrip")
 mesh = SubResource("ArrayMesh_hjfjj")
 skeleton = NodePath("")
 
-[node name="cookies_017" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_017" type="MeshInstance3D" parent="."]
 transform = Transform3D(19.8981, 5.21843, 0, 6.13063e-07, -2.45225e-06, 10.5311, 5.21843, -19.8981, -1.2554e-06, -0.553253, 3.36779, 0.580304)
 material_override = SubResource("StandardMaterial3D_khqta")
 mesh = SubResource("ArrayMesh_mtdij")
 skeleton = NodePath("")
 
-[node name="cookies_018" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_018" type="MeshInstance3D" parent="."]
 transform = Transform3D(14.5705, -14.5212, 0, 0, 0, 10.5311, -14.5212, -14.5705, 0, -0.587487, 3.13541, 0.844025)
 material_override = SubResource("StandardMaterial3D_soo6l")
 mesh = SubResource("ArrayMesh_5qowv")
 skeleton = NodePath("")
 
-[node name="cookies_019" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_019" type="MeshInstance3D" parent="."]
 transform = Transform3D(14.5705, -14.5212, 0, 0, 0, 10.5311, -14.5212, -14.5705, 0, 0.477805, 3.1129, 0.956755)
 material_override = SubResource("StandardMaterial3D_2uav1")
 mesh = SubResource("ArrayMesh_r7es6")
 skeleton = NodePath("")
 
-[node name="cookies_020" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_020" type="MeshInstance3D" parent="."]
 transform = Transform3D(14.5705, -14.5212, 0, 0, 0, 10.5311, -14.5212, -14.5705, 0, 0.582323, 3.1129, -0.143474)
 material_override = SubResource("StandardMaterial3D_p6whn")
 mesh = SubResource("ArrayMesh_2rhl2")
 skeleton = NodePath("")
 
-[node name="cookies_021" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_021" type="MeshInstance3D" parent="."]
 transform = Transform3D(14.5705, -14.5212, 0, 0, 0, 10.5311, -14.5212, -14.5705, 0, -0.514291, 3.1129, -0.281519)
 material_override = SubResource("StandardMaterial3D_uefm6")
 mesh = SubResource("ArrayMesh_jkcp6")
 skeleton = NodePath("")
 
-[node name="cookies_022" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_022" type="MeshInstance3D" parent="."]
 transform = Transform3D(14.0306, 15.0435, 6.70826e-07, 6.13063e-07, -2.45225e-06, 10.5311, 15.0435, -14.0306, -1.06114e-06, -0.0113776, 3.56948, 0.343725)
 material_override = SubResource("StandardMaterial3D_kyk2j")
 mesh = SubResource("ArrayMesh_rxb6a")
 skeleton = NodePath("")
 
-[node name="cookies_023" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_023" type="MeshInstance3D" parent="."]
 transform = Transform3D(19.8981, 5.21843, 0, 6.13063e-07, -2.45225e-06, 10.5311, 5.21843, -19.8981, -1.2554e-06, -0.261257, 3.56948, 0.017933)
 material_override = SubResource("StandardMaterial3D_sltsm")
 mesh = SubResource("ArrayMesh_ktway")
 skeleton = NodePath("")
 
-[node name="cookies_024" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_024" type="MeshInstance3D" parent="."]
 transform = Transform3D(4.68855, 20.0296, 1.10979e-06, 6.13063e-07, -2.45225e-06, 10.5311, 20.0296, -4.68855, -5.86858e-07, 0.336555, 3.56948, 0.128639)
 material_override = SubResource("StandardMaterial3D_5v15g")
 mesh = SubResource("ArrayMesh_lt2kx")
 skeleton = NodePath("")
 
-[node name="cookies_025" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_025" type="MeshInstance3D" parent="."]
 transform = Transform3D(17.93, 10.0838, 3.17678e-07, 6.13063e-07, -2.45225e-06, 10.5311, 10.0838, -17.93, -1.21454e-06, -0.343495, 3.56948, 0.593603)
 material_override = SubResource("StandardMaterial3D_jw2xs")
 mesh = SubResource("ArrayMesh_ah7i4")
 skeleton = NodePath("")
 
-[node name="cookies_026" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_026" type="MeshInstance3D" parent="."]
 transform = Transform3D(-16.3625, -12.4673, -4.82647e-07, 6.13063e-07, -2.45225e-06, 10.5311, -12.4673, 16.3625, 1.15891e-06, 0.24799, 3.56948, 0.685331)
 material_override = SubResource("StandardMaterial3D_konl4")
 mesh = SubResource("ArrayMesh_n5gsx")
 skeleton = NodePath("")
 
-[node name="cookies_027" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="cookies_027" type="MeshInstance3D" parent="."]
 transform = Transform3D(14.5705, -14.5212, 0, 0, 0, 10.5311, -14.5212, -14.5705, 0, -0.0852223, 3.15901, 0.933678)
 mesh = SubResource("ArrayMesh_fvsjc")
 skeleton = NodePath("")
 
-[node name="leg" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="leg" type="MeshInstance3D" parent="."]
 transform = Transform3D(3.45185, 3.27627e-07, 9.11049e-06, -1.22634e-14, -3.98882, 97.9101, -3.0177e-07, 3.74761, 104.212, -0.607435, 0.87412, 0.170812)
 material_override = ExtResource("1_soo6l")
 mesh = SubResource("ArrayMesh_2t17t")
 skeleton = NodePath("")
 
-[node name="leg_001" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="leg_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(3.45185, -3.31777e-07, 9.00738e-06, 0, -3.94367, -99.1505, -3.0177e-07, -3.79509, 103.032, -0.550053, 0.87412, 0.170812)
 material_override = ExtResource("1_soo6l")
 mesh = SubResource("ArrayMesh_2xk0l")
 skeleton = NodePath("")
 
-[node name="leg_002" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="leg_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(3.45185, -3.31777e-07, 9.00738e-06, 0, -3.94367, -99.1505, -3.0177e-07, -3.79509, 103.032, 0.675818, 0.87412, 0.170812)
 material_override = ExtResource("1_soo6l")
 mesh = SubResource("ArrayMesh_2nkhu")
 skeleton = NodePath("")
 
-[node name="leg_003" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="leg_003" type="MeshInstance3D" parent="."]
 transform = Transform3D(3.45185, 3.27627e-07, 9.11049e-06, -1.22634e-14, -3.98882, 97.9101, -3.0177e-07, 3.74761, 104.212, 0.618436, 0.87412, 0.170812)
 material_override = ExtResource("1_soo6l")
 mesh = SubResource("ArrayMesh_skfpe")
 skeleton = NodePath("")
 
-[node name="lid" type="MeshInstance3D" parent="shikaSenbeiStandOriginalModelHehe"]
+[node name="lid" type="MeshInstance3D" parent="."]
 transform = Transform3D(82.3077, 8.99707, 1.24069e-07, 0, 0, 11.1015, 8.99707, -82.3077, 0, 0, 3.13202, 0.353921)
 material_override = SubResource("StandardMaterial3D_3ns8y")
 mesh = SubResource("ArrayMesh_48m2n")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="shikaSenbeiStandOriginalModelHehe"]
-transform = Transform3D(2.52748, 0, 0, 0, 4.52867, 0, 0, 0, 1.91184, 0, 2.04647, -0.386561)
-shape = SubResource("BoxShape3D_soo6l")
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.53879, 0)
+physics_material_override = SubResource("PhysicsMaterial_soo6l")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_2uav1")

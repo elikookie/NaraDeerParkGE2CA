@@ -7,6 +7,5 @@ func _physics_process(_delta: float) -> void:
 	prompt.text = ""
 	
 	if is_colliding():
-		var collider = get_collider()
 		
-		prompt.text = "detecting " + collider.name
+		prompt.text = "detecting "

@@ -80,12 +80,12 @@ mesh = SubResource("BoxMesh_yc10j")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ground"]
 shape = SubResource("BoxShape3D_jscy8")
 
+[node name="MC" parent="." instance=ExtResource("5_tbgi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7587, 1.93716, -0.848487)
+
 [node name="park" parent="." instance=ExtResource("4_jyhfs")]
 
 [node name="DeerContainer" type="Node3D" parent="."]
 
 [node name="deerCookies" parent="." instance=ExtResource("22_jscy8")]
 transform = Transform3D(-0.606766, 0, 0.794881, 0, 1, 0, -0.794881, 0, -0.606766, -15.2062, 0.685387, 5.36003)
-
-[node name="MC" parent="." instance=ExtResource("5_tbgi4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7587, 1.93716, -0.848487)
