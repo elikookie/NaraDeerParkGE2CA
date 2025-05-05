@@ -28,7 +28,8 @@ func _ready():
 	randomize()
 	speed = randf_range(min_speed, max_speed)
 	start_wander()
-
+	add_to_group("deer")
+	
 	dir_timer.timeout.connect(_on_direction_timeout)
 	graze_timer.timeout.connect(_on_graze_timeout)
 
@@ -79,20 +80,29 @@ func _physics_process(delta: float):
 			else:
 				start_wander()
 		"hungry":
+			if GameState.get_value("cookie") <= 0:
+				start_wander()
+				return
 			if player:
 				var to_player = (player.global_position - global_position).normalized()
-				move_dir = move_dir.lerp(to_player, 0.1)
-				velocity.x = move_dir.x * speed
-				velocity.z = move_dir.z * speed
-				rotate_toward_direction(delta)
-
 				var distance = global_position.distance_to(player.global_position)
-				if distance < bow_distance and not is_bowing:
-					anim_player.play("bow")
-					is_bowing = true
-				elif distance >= bow_distance and is_bowing:
-					anim_player.play("walk")
-					is_bowing = false
+				if distance > bow_distance:
+					move_dir = move_dir.lerp(to_player, 0.1)
+					velocity.x = move_dir.x * speed
+					velocity.z = move_dir.z * speed
+					rotate_toward_direction(delta)
+
+				elif distance < bow_distance:
+					velocity.x = 0
+					velocity.z = 0
+
+					if not is_bowing:
+						anim_player.play("bow")
+						is_bowing = true
+					else:
+						if is_bowing:
+							anim_player.play("walk")
+							is_bowing = false
 
 	move_and_slide()
 
