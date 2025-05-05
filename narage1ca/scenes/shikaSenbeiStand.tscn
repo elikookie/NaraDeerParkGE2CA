@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://kxua7bby368p" path="res://assets/models/boxBaseColor.png" id="1_q8quj"]
 [ext_resource type="Material" uid="uid://ckj7m8mnodo4i" path="res://assets/materials/metal.tres" id="1_soo6l"]
 [ext_resource type="Texture2D" uid="uid://cfuyio0yqtjtm" path="res://assets/models/lidBaseColor.png" id="3_a2aqr"]
-[ext_resource type="Script" uid="uid://2ri6s3uwsdw0" path="res://scenes/shika_senbei_stand.gd" id="6_2uav1"]
+[ext_resource type="Script" uid="uid://2ri6s3uwsdw0" path="res://scripts/shika_senbei_stand.gd" id="6_2uav1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_alxy8"]
 resource_name = "Material"

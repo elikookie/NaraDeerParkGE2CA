@@ -23,12 +23,11 @@ var stand_height : float
 var old_vel : float = 0.0
 var moving : bool = true
 
-
 func _ready():
+	add_to_group("player")
 	look_rot.y = rotation_degrees.y
 	stand_height = collision_shape.shape.height
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("menu"):
@@ -36,6 +35,17 @@ func _physics_process(delta):
 	# movement
 	var move_speed = speed
 	
+	if Input.is_action_just_pressed("interact"):
+		for deer in get_tree().get_nodes_in_group("deer"):
+			print_debug("Checking deer:", deer.name)
+			print_debug("Distance to deer:", global_position.distance_to(deer.global_position))
+			print_debug("Cookies:", GameState.get_value("cookie"))
+			var distance = global_position.distance_to(deer.global_position)
+			if distance < deer.bow_distance and GameState.get_value("cookie") > 0:
+				print_debug("Feeding deer!")
+				GameState.set_value("cookie", GameState.get_value("cookie") - 1)
+				deer.start_wander()
+
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	elif moving:

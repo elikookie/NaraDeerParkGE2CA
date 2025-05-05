@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bcrh1wqigo3cp"]
 
-[ext_resource type="Script" uid="uid://dh5cgc605okx4" path="res://sliders.gd" id="1_b5mpp"]
+[ext_resource type="Script" uid="uid://dh5cgc605okx4" path="res://scripts/sliders.gd" id="1_b5mpp"]
 [ext_resource type="Shader" uid="uid://c3nl56f6e6vms" path="res://scenes/sliders.gdshader" id="2_rs1x6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_um5f7"]

@@ -19,6 +19,10 @@ var is_flock_leader: bool = false
 var flock_leader: Node3D = null
 var flock_timer: float = 0.0
 var is_turning_in_place := false
+var player: Node3D = null
+var hunger_range: float = 10.0
+var bow_distance: float = 3.0
+var is_bowing: bool = false
 
 func _ready():
 	randomize()
@@ -27,6 +31,8 @@ func _ready():
 
 	dir_timer.timeout.connect(_on_direction_timeout)
 	graze_timer.timeout.connect(_on_graze_timeout)
+
+	player = get_tree().get_nodes_in_group("player")[0]
 
 	dir_timer.start()
 	obstacle_ray.enabled = true
@@ -40,7 +46,12 @@ func _physics_process(delta: float):
 
 	match state:
 		"wander":
-			if obstacle_ray.is_colliding():
+			if player and GameState.get_value("cookie") > 0:
+				var distance = global_position.distance_to(player.global_position)
+				if distance < hunger_range:
+					start_hungry()
+					return
+			elif obstacle_ray.is_colliding():
 				start_turn(-move_dir)
 			else:
 				velocity.x = move_dir.x * speed
@@ -67,6 +78,21 @@ func _physics_process(delta: float):
 					start_wander()
 			else:
 				start_wander()
+		"hungry":
+			if player:
+				var to_player = (player.global_position - global_position).normalized()
+				move_dir = move_dir.lerp(to_player, 0.1)
+				velocity.x = move_dir.x * speed
+				velocity.z = move_dir.z * speed
+				rotate_toward_direction(delta)
+
+				var distance = global_position.distance_to(player.global_position)
+				if distance < bow_distance and not is_bowing:
+					anim_player.play("bow")
+					is_bowing = true
+				elif distance >= bow_distance and is_bowing:
+					anim_player.play("walk")
+					is_bowing = false
 
 	move_and_slide()
 
@@ -93,7 +119,8 @@ func start_wander():
 	anim_player.play("walk")
 	pick_new_direction()
 	dir_timer.start(randf_range(10.0, 15.0))
-
+	is_bowing = false
+	
 func pick_new_direction():
 	var ang = randf() * TAU
 	move_dir = Vector3(cos(ang), 0, sin(ang)).normalized()
@@ -171,3 +198,10 @@ func rotate_toward_direction(delta: float):
 
 		var smooth_quat = current_quat.slerp(target_quat, turn_speed * delta)
 		global_transform.basis = Basis(smooth_quat)
+
+func start_hungry():
+	state = "hungry"
+	anim_player.play("walk")
+	dir_timer.stop()
+	graze_timer.stop()
+	is_bowing = false
