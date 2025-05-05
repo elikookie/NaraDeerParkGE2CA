@@ -75,6 +75,7 @@ environment = SubResource("Environment_sugp2")
 [node name="ground" type="StaticBody3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ground"]
+transform = Transform3D(1.27941, 0, 0, 0, 1, 0, 0, 0, 1.28471, 4.93874, 0.0614529, 0.582323)
 material_override = ExtResource("3_yc10j")
 mesh = SubResource("BoxMesh_yc10j")
 
@@ -89,7 +90,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7587, 1.93716, -0.848487)
 [node name="DeerContainer" type="Node3D" parent="."]
 
 [node name="deerCookies" parent="." instance=ExtResource("22_jscy8")]
-transform = Transform3D(-0.606766, 0, 0.794881, 0, 1, 0, -0.794881, 0, -0.606766, -15.2062, 0.685387, 5.36003)
+transform = Transform3D(-0.464858, 0, 0.535125, 0, 0.703096, 0, -0.608977, 0, -0.408483, -15.2062, 0.685387, 5.36003)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
