@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://pl6vkch3v2xv"]
+
+[ext_resource type="Script" uid="uid://b1xqxsbwmjr84" path="res://scenes/mc.gd" id="1_3vyb7"]
+[ext_resource type="PackedScene" uid="uid://cqe10jiyydbl1" path="res://scenes/interact_ray.tscn" id="2_g2els"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_g2els"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qhqgy"]
+
+[node name="MC" type="CharacterBody3D"]
+script = ExtResource("1_3vyb7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0.507109, 0)
+mesh = SubResource("CapsuleMesh_g2els")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0.507109, 0)
+shape = SubResource("CapsuleShape3D_qhqgy")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0491219, 1.9395, 0.00291061)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(0.87549, 0, -0.483237, 0, 1, 0, 0.483237, 0, 0.87549, 0, 0, 0)
+
+[node name="InteractRay" parent="Head" instance=ExtResource("2_g2els")]

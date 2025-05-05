@@ -1,9 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://faj6l2m0t4dj"]
+[gd_scene load_steps=12 format=3 uid="uid://faj6l2m0t4dj"]
 
 [ext_resource type="PackedScene" uid="uid://bpqulhlxa6haq" path="res://scenes/deer.tscn" id="2_pm3ni"]
 [ext_resource type="Material" uid="uid://dkah2efh2egsk" path="res://assets/materials/Grass004_4K-PNG/grass.tres" id="3_yc10j"]
 [ext_resource type="PackedScene" uid="uid://ctltjqqlkh8xu" path="res://scenes/park.tscn" id="4_jyhfs"]
-[ext_resource type="Script" uid="uid://b1xqxsbwmjr84" path="res://scenes/mc.gd" id="21_yc10j"]
+[ext_resource type="PackedScene" uid="uid://pl6vkch3v2xv" path="res://scenes/player.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://qn7usvhukmd8" path="res://scenes/shikaSenbeiStand.tscn" id="22_jscy8"]
 
 [sub_resource type="GDScript" id="GDScript_gqmmt"]
@@ -59,10 +59,6 @@ size = Vector3(50, 1, 50)
 [sub_resource type="BoxShape3D" id="BoxShape3D_jscy8"]
 size = Vector3(50, 1, 50)
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_yc10j"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jyhfs"]
-
 [node name="Node3D" type="Node3D"]
 script = SubResource("GDScript_gqmmt")
 deer_scene = ExtResource("2_pm3ni")
@@ -88,23 +84,8 @@ shape = SubResource("BoxShape3D_jscy8")
 
 [node name="DeerContainer" type="Node3D" parent="."]
 
-[node name="MC" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.259, 1.54962, 0)
-script = ExtResource("21_yc10j")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="MC"]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0.507109, 0)
-mesh = SubResource("CapsuleMesh_yc10j")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MC"]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0.507109, 0)
-shape = SubResource("CapsuleShape3D_jyhfs")
-
-[node name="Head" type="Node3D" parent="MC"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0491219, 1.9395, 0.00291061)
-
-[node name="Camera3D" type="Camera3D" parent="MC/Head"]
-transform = Transform3D(0.87549, 0, -0.483237, 0, 1, 0, 0.483237, 0, 0.87549, 0, 0, 0)
-
 [node name="deerCookies" parent="." instance=ExtResource("22_jscy8")]
 transform = Transform3D(-0.606766, 0, 0.794881, 0, 1, 0, -0.794881, 0, -0.606766, -15.2062, 0.685387, 5.36003)
+
+[node name="MC" parent="." instance=ExtResource("5_tbgi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7587, 1.93716, -0.848487)
