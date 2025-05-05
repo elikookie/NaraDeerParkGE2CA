@@ -88,6 +88,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7587, 1.93716, -0.848487)
 [node name="park" parent="." instance=ExtResource("4_jyhfs")]
 
 [node name="DeerContainer" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00613594, -1.90735e-06, -0.0780106)
 
 [node name="deerCookies" parent="." instance=ExtResource("22_jscy8")]
 transform = Transform3D(-0.464858, 0, 0.535125, 0, 0.703096, 0, -0.608977, 0, -0.408483, -15.2062, 0.685387, 5.36003)

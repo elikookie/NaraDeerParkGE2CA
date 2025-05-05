@@ -38,10 +38,11 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("interact"):
 		for deer in get_tree().get_nodes_in_group("deer"):
 			var distance = global_position.distance_to(deer.global_position)
-			var forward = -deer.global_transform.basis.z.normalized()
+			var forward  = -deer.global_transform.basis.z.normalized()
 			var to_player = (global_position - deer.global_position).normalized()
-
-			if distance < deer.bow_distance and forward.dot(to_player) > 0.7 and GameState.get_value("cookie") > 0:
+			var dot_val  = forward.dot(to_player)
+			
+			if distance < deer.bow_distance and dot_val > 0.7 and GameState.get_value("cookie") > 0:
 						# Feed one deer...
 						GameState.set_value("cookie", GameState.get_value("cookie") - 1)
 						# **all** hungry deer if out of cookies:

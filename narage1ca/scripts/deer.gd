@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@export var min_speed: float = 0.2
+@export var min_speed: float = 0.3
 @export var max_speed: float = 1
 @export var turn_speed: float = 2.0
 @export var gravity: float = 9.8
@@ -91,18 +91,13 @@ func _physics_process(delta: float):
 					velocity.x = move_dir.x * speed
 					velocity.z = move_dir.z * speed
 					rotate_toward_direction(delta)
-
-				elif distance < bow_distance:
+				else:
+					# stop and bow
 					velocity.x = 0
 					velocity.z = 0
-
 					if not is_bowing:
 						anim_player.play("bow")
 						is_bowing = true
-					else:
-						if is_bowing:
-							anim_player.play("walk")
-							is_bowing = false
 
 	move_and_slide()
 
@@ -181,9 +176,7 @@ func start_turn(dir: Vector3):
 func do_smooth_turn(delta: float):
 	var desired_dir = target_dir.normalized()
 	var facing_target = global_transform.looking_at(global_position + desired_dir, Vector3.UP)
-
-	# Flip model if needed (if your deer faces -Z in model space)
-	var target_basis = facing_target.basis.rotated(Vector3.UP, PI)
+	var target_basis = facing_target.basis
 
 	var current_quat = global_transform.basis.get_rotation_quaternion()
 	var target_quat = target_basis.get_rotation_quaternion()
@@ -201,7 +194,7 @@ func rotate_toward_direction(delta: float):
 	var horiz = Vector3(velocity.x, 0, velocity.z)
 	if horiz.length() > 0.1:
 		var target = global_transform.looking_at(global_position + horiz.normalized(), Vector3.UP)
-		var target_basis = target.basis.rotated(Vector3.UP, PI)
+		var target_basis = target.basis
 
 		var current_quat = global_transform.basis.get_rotation_quaternion()
 		var target_quat = target_basis.get_rotation_quaternion()
