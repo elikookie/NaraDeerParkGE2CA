@@ -4,18 +4,20 @@ class_name Interactable
 @export var prompt_message = "Interactable"
 @export var prompt_input = "interact"
 
+signal interacted(body)
+
 func get_prompt():
 	var key_name = ""
 	for action in InputMap.action_get_events(prompt_input):
 		if action is InputEventKey:
-			key_name - action.as_text_physical_keycode()
+			key_name = action.as_text_physical_keycode()
 			break
 			
 	return prompt_message + "\n[" + key_name + "]"
 
 
 func interact(body):
-	print(body.name, " interacted with ", name)
+	interacted.emit(body)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

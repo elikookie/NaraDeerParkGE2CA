@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://pl6vkch3v2xv"]
+[gd_scene load_steps=6 format=3 uid="uid://pl6vkch3v2xv"]
 
 [ext_resource type="Script" uid="uid://b1xqxsbwmjr84" path="res://scenes/mc.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://cqe10jiyydbl1" path="res://scenes/interact_ray.tscn" id="2_g2els"]
+[ext_resource type="Script" uid="uid://bcauixc7mores" path="res://scenes/ui.gd" id="3_qhqgy"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_g2els"]
 
@@ -25,3 +26,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0491219, 1.9395, 0.00291061
 transform = Transform3D(0.87549, 0, -0.483237, 0, 1, 0, 0.483237, 0, 0.87549, 0, 0, 0)
 
 [node name="InteractRay" parent="Head" instance=ExtResource("2_g2els")]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_qhqgy")
+
+[node name="CookieCount" type="Label" parent="UI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 32

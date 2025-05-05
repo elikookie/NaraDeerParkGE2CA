@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://kxua7bby368p" path="res://assets/models/boxBaseColor.png" id="1_q8quj"]
 [ext_resource type="Material" uid="uid://ckj7m8mnodo4i" path="res://assets/materials/metal.tres" id="1_soo6l"]
 [ext_resource type="Texture2D" uid="uid://cfuyio0yqtjtm" path="res://assets/models/lidBaseColor.png" id="3_a2aqr"]
-[ext_resource type="Script" uid="uid://bawv1lvomfj30" path="res://scenes/interactable.gd" id="6_2uav1"]
+[ext_resource type="Script" uid="uid://2ri6s3uwsdw0" path="res://scenes/shika_senbei_stand.gd" id="6_2uav1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_alxy8"]
 resource_name = "Material"
@@ -1749,10 +1749,12 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.53879, 0)
 physics_material_override = SubResource("PhysicsMaterial_soo6l")
 script = ExtResource("6_2uav1")
-prompt_message = "Buy Deer Cookies"
+prompt_message = "Pick Up Cookies"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ShikaSenbeiStand"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ShikaSenbeiStand"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_2uav1")
+
+[connection signal="interacted" from="ShikaSenbeiStand" to="ShikaSenbeiStand" method="_on_interacted"]
