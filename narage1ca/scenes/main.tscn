@@ -30,8 +30,8 @@ func spawn_deer() -> void:
 "
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o5qli"]
-sky_top_color = Color(0.681821, 0.815587, 1, 1)
-sky_horizon_color = Color(0.509545, 0.64217, 0.831475, 1)
+sky_top_color = Color(0.504832, 0.713647, 0.999999, 1)
+sky_horizon_color = Color(0.308803, 0.702488, 0.978691, 1)
 ground_bottom_color = Color(0, 0, 0, 1)
 ground_horizon_color = Color(0.509545, 0.64217, 0.831475, 1)
 energy_multiplier = 1.05
@@ -44,6 +44,10 @@ background_mode = 2
 sky = SubResource("Sky_0wfyh")
 tonemap_mode = 2
 ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
 glow_normalized = true
 glow_strength = 1.05
 fog_mode = 1
@@ -51,14 +55,14 @@ fog_light_color = Color(0.922522, 0.795554, 0.92826, 1)
 fog_light_energy = 0.29
 fog_density = 1.0
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.0206
-volumetric_fog_albedo = Color(0.552956, 0.552956, 0.552956, 1)
+volumetric_fog_density = 0.0106
+volumetric_fog_albedo = Color(1, 0.890196, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_yc10j"]
 size = Vector3(50, 1, 50)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jscy8"]
-size = Vector3(50, 1, 50)
+size = Vector3(69.3692, 1, 65.8759)
 
 [node name="Node3D" type="Node3D"]
 script = SubResource("GDScript_gqmmt")
@@ -66,6 +70,7 @@ deer_scene = ExtResource("2_pm3ni")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.702143, -0.710716, -0.0433333, 0.657472, 0.623771, 0.422658, -0.27336, -0.325257, 0.905253, -17.2118, 21.0533, 27.2065)
+light_color = Color(1, 0.928739, 0.763589, 1)
 light_bake_mode = 1
 shadow_enabled = true
 
@@ -80,6 +85,7 @@ material_override = ExtResource("3_yc10j")
 mesh = SubResource("BoxMesh_yc10j")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2101, 0, 0.142975)
 shape = SubResource("BoxShape3D_jscy8")
 
 [node name="MC" parent="." instance=ExtResource("5_tbgi4")]

@@ -39,7 +39,8 @@ script = ExtResource("3_qhqgy")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-theme_override_font_sizes/font_size = 32
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 46
 
 [node name="FeedStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_dqkch")

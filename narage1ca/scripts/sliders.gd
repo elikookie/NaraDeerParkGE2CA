@@ -86,8 +86,9 @@ func _on_option_button_item_selected(index: int) -> void:
 
 
 func _on_add_deer_pressed() -> void:
-	var deer_scene = preload("res://scenes/deer.tscn")
-	var deer_parent = get_node("DeerContainer")
-
-	var deer = deer_scene.instantiate()
-	deer_parent.add_child(deer)
+	pass
+	#var deer_scene = preload("res://scenes/deer.tscn")
+	#var deer_parent = get_node("DeerContainer")
+#
+	#var deer = deer_scene.instantiate()
+	#deer_parent.add_child(deer)
