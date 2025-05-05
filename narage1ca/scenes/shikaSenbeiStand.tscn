@@ -1,10 +1,11 @@
-[gd_scene load_steps=144 format=4 uid="uid://qn7usvhukmd8"]
+[gd_scene load_steps=145 format=4 uid="uid://qn7usvhukmd8"]
 
 [ext_resource type="Texture2D" uid="uid://icsrx0k3q7pw" path="res://assets/models/cookiesBase Color.png" id="1_6bxcx"]
 [ext_resource type="Texture2D" uid="uid://2cqyej6phgfi" path="res://assets/models/SignBaseColor.png" id="1_khqta"]
 [ext_resource type="Texture2D" uid="uid://kxua7bby368p" path="res://assets/models/boxBaseColor.png" id="1_q8quj"]
 [ext_resource type="Material" uid="uid://ckj7m8mnodo4i" path="res://assets/materials/metal.tres" id="1_soo6l"]
 [ext_resource type="Texture2D" uid="uid://cfuyio0yqtjtm" path="res://assets/models/lidBaseColor.png" id="3_a2aqr"]
+[ext_resource type="Script" uid="uid://bawv1lvomfj30" path="res://scenes/interactable.gd" id="6_2uav1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_alxy8"]
 resource_name = "Material"
@@ -1744,12 +1745,14 @@ material_override = SubResource("StandardMaterial3D_3ns8y")
 mesh = SubResource("ArrayMesh_48m2n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="ShikaSenbeiStand" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.53879, 0)
 physics_material_override = SubResource("PhysicsMaterial_soo6l")
+script = ExtResource("6_2uav1")
+prompt_message = "Buy Deer Cookies"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ShikaSenbeiStand"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ShikaSenbeiStand"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_2uav1")
